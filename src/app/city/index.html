@@ -1,7 +1,7 @@
 <h1>City: {{city.name | uppercase}}</h1>
 <div class="buttons">
   <p ng-repeat="weatherType in city.weatherTypes track by $index">
-    <a ui-sref="{{weatherType.route}}" data-href="{{weatherType.url}}" ng-click="goToWeather(weatherType.id)" ui-sref-active="active">
+    <a ui-sref="{{weatherType.route}}" data-href="{{weatherType.url}}" ng-click="city.goToWeather(weatherType.id)" ui-sref-active="active">
       {{weatherType.name}}
     </a>
   </p>
